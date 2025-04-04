@@ -10,13 +10,14 @@ import Foundation
 @Observable
 @MainActor
 class HomeViewModel {
+    
+    static let shared = HomeViewModel()
+    private init() { }
+    
     let prayData = PrayData()
     var prayCategories: [PrayCategory] = []
-    
-    init() {
-        
-    }
-    
+    var isDarkMode: Bool = false
+   
     func setPrayCategories() {
         prayCategories = prayData.prayCategories
     }

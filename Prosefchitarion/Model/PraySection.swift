@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct PraySection {
+struct PraySection: Identifiable {
+    var id = UUID()
     let sectionTitle: String
     let sectionColor: Color
     let prayElement: [PrayElement]
